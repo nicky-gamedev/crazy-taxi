@@ -56,8 +56,6 @@ public class SpaceshipCameraController : MonoBehaviour
     {
         _inputLookDirection.y = look.y * Time.deltaTime;
         _inputLookDirection.x = look.x * Time.deltaTime;
-        
-        
     }
 
     private void UpdateCameraFOV()
