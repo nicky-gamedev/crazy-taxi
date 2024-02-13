@@ -10,7 +10,7 @@ public class SpaceshipMovement : MonoBehaviour
     [SerializeField] private Camera _mainCamera;
     [SerializeField] private float _speed;
     [SerializeField] private float _turnRate;
-    [SerializeField] private float _handbreakTime;
+    [SerializeField] private float _brakeFactor;
 
     public Vector3 Velocity => _rb.velocity;
 
@@ -38,18 +38,12 @@ public class SpaceshipMovement : MonoBehaviour
     
     private void DoHandbreak()
     {
-        StartCoroutine(Handbrake());
-    }
-
-    IEnumerator Handbrake()
-    {
-        float time = 0.0f;
-        while (time < _handbreakTime)
-        {
-            time += Time.deltaTime;
-            _rb.velocity = Vector3.Lerp(_rb.velocity, Vector3.zero, 0.1f);
-            yield return null;
+        _rb.AddForce(-_brakeFactor * _rb.velocity);
+       
+        if (_rb.velocity.sqrMagnitude < 0.1) {
+            _rb.Sleep();
         }
     }
+    
 
 }
