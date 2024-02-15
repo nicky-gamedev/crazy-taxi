@@ -17,12 +17,17 @@ public class MissionManager : MonoBehaviour
     {
         var position = new Vector3(Random.Range(0f,240f), 0, Random.Range(0f, 220f));
         NavMeshHit hit;
-        NavMesh.SamplePosition(position, out hit, 10, 1);
-        transform.position = hit.position;
+        while (!NavMesh.SamplePosition(position, out hit, 10, 1))
+        {
+            position = new Vector3(Random.Range(0f,240f), 0, Random.Range(0f, 220f));
+        };
+        position = hit.position;
+        position.y += 1;
+        transform.position = position;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("MissionComplete");
+        GetNewDestination();
     }
 }
