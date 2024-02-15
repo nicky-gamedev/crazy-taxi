@@ -86,7 +86,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 112
-  m_CollisionDetection: 2
+  m_CollisionDetection: 1
 --- !u!114 &266484137983372285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   _rb: {fileID: 805267997299329487}
   _mainCamera: {fileID: 0}
   _speed: 50
-  _turnRate: 70
+  _turnRate: 999
   _brakeFactor: 50
 --- !u!114 &3607781246087267409
 MonoBehaviour:
@@ -187,7 +187,7 @@ Transform:
   m_GameObject: {fileID: 4669489308240153334}
   serializedVersion: 2
   m_LocalRotation: {x: 0.053403575, y: -0, z: -0, w: 0.998573}
-  m_LocalPosition: {x: 0, y: 1.81, z: 0.92}
+  m_LocalPosition: {x: -0.109, y: 0.303, z: 0.006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -207,8 +207,8 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 9
   m_Range: 20.8
-  m_SpotAngle: 93.68066
-  m_InnerSpotAngle: 55.608383
+  m_SpotAngle: 128.63757
+  m_InnerSpotAngle: 89.71171
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0

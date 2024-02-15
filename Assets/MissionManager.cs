@@ -8,11 +8,7 @@ using Random = UnityEngine.Random;
 
 public class MissionManager : MonoBehaviour
 {
-    public void Start()
-    {
-        GetNewDestination();
-    }
-
+    [SerializeField] private int _addTime;
     public void GetNewDestination()
     {
         var position = new Vector3(Random.Range(0f,240f), 0, Random.Range(0f, 220f));
@@ -29,5 +25,6 @@ public class MissionManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         GetNewDestination();
+        GameManager.Instance.AddTime(_addTime);
     }
 }
