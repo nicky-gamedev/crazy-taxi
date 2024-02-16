@@ -19,7 +19,7 @@ public class GameManager : Singleton<GameManager>
 
     private void SetupNewGame()
     {
-        AddTime(_startTime);
+        TimeRemaining = _startTime;
         StartCoroutine(UpdateTimer());
         _missionManager.GetNewDestination();
     }

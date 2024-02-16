@@ -11,7 +11,7 @@ public class MissionManager : MonoBehaviour
     [SerializeField] private int _addTime;
     public void GetNewDestination()
     {
-        var position = new Vector3(Random.Range(0f,240f), 0, Random.Range(0f, 220f));
+        var position = new Vector3(Random.Range(-163f,436f), 0, Random.Range(-180f, 310f));
         NavMeshHit hit;
         while (!NavMesh.SamplePosition(position, out hit, 10, 1))
         {

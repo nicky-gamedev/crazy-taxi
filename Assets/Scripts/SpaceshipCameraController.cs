@@ -9,7 +9,8 @@ public class SpaceshipCameraController : MonoBehaviour
     [SerializeField] private Camera _camera;
     [SerializeField] private InputReader _inputReader;
     [SerializeField] private SpaceshipMovement _movement;
-    [SerializeField] private float _offset;
+    [SerializeField] private float _horizontalDistance;
+    [SerializeField] private float _verticalDistance;
     
     [SerializeField] private float _minimumRotation;
     [SerializeField] private float _maximumRotation;
@@ -40,7 +41,9 @@ public class SpaceshipCameraController : MonoBehaviour
 
     private void Update()
     {
-        transform.position = _movement.transform.position - (_movement.transform.forward * _offset);
+        var final = _movement.transform.position - (_movement.transform.forward * _horizontalDistance);
+        final.y += _verticalDistance;
+        transform.position = final;
         UpdateCameraFOV();
     }
 
