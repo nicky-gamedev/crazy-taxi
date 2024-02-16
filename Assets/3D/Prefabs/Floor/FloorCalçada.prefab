@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 5629234108625508696}
   - component: {fileID: 7665839097426263373}
   - component: {fileID: 412394338833530753}
+  - component: {fileID: 7380440922858263067}
   m_Layer: 0
   m_Name: CalcadaTile
   m_TagString: Untagged
@@ -166,6 +167,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7380440922858263067
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3378210168148860925}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5924782027982457823, guid: e023170efd3dbaa45b0ddc486dc2ecfe, type: 3}
 --- !u!1 &5856378592825242876
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,7 +281,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7674057776708077412}
-  - component: {fileID: 4533145981141021196}
   m_Layer: 0
   m_Name: "FloorCal\xE7ada"
   m_TagString: Untagged
@@ -284,25 +306,3 @@ Transform:
   - {fileID: 1989470669121544711}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &4533145981141021196
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6299962850468293858}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}

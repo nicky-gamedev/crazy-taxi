@@ -175,7 +175,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 496519911288419476}
-  - component: {fileID: 1395426922400473393}
   m_Layer: 0
   m_Name: Building_4
   m_TagString: Untagged
@@ -205,28 +204,6 @@ Transform:
   - {fileID: 2145909954552930319}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1395426922400473393
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3715606751320576760}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &4072402500050180037
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,6 +464,7 @@ GameObject:
   - component: {fileID: 4779799909441842630}
   - component: {fileID: 1490332217796025685}
   - component: {fileID: 8045056004759257184}
+  - component: {fileID: 6307461518169484445}
   m_Layer: 0
   m_Name: Building_Green
   m_TagString: Untagged
@@ -559,6 +537,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6307461518169484445
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7358945675008442055}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2243070709120633435, guid: f34df57b1628b604db6952b25d42e47a, type: 3}
 --- !u!1 &7710567951645236490
 GameObject:
   m_ObjectHideFlags: 0
