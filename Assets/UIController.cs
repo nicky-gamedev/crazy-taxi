@@ -15,7 +15,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _timer;
     [SerializeField] private GameObject _gameOverPanel;
 
-    private void Awake()
+    private void Start()
     {
         GameManager.Instance.onGameOver.AddListener(OpenGameOverScreen);
     }
