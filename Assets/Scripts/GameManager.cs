@@ -2,11 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private int _startTime;
     [SerializeField] private MissionManager _missionManager;
+    public UnityEvent onGameOver;
     public int TimeRemaining { get; private set; }
 
     void Start()
@@ -23,7 +26,7 @@ public class GameManager : Singleton<GameManager>
 
     public void AddTime(int amount)
     {
-        TimeRemaining = amount;
+        TimeRemaining += amount;
     }
 
     private IEnumerator UpdateTimer()
@@ -38,7 +41,12 @@ public class GameManager : Singleton<GameManager>
 
     public void GameOver()
     {
-        Debug.Log("GAME OVER");
+        onGameOver.Invoke();
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     protected override void OnApplicationQuitCallback()

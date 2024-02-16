@@ -18,7 +18,7 @@ public class MissionManager : MonoBehaviour
             position = new Vector3(Random.Range(0f,240f), 0, Random.Range(0f, 220f));
         };
         position = hit.position;
-        position.y += 1;
+        position.y += 5.5f;
         transform.position = position;
     }
 

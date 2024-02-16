@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.XR;
 
 public class SpaceshipMovement : MonoBehaviour
@@ -12,7 +13,8 @@ public class SpaceshipMovement : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private float _turnRate;
     [SerializeField] private float _brakeFactor;
-    [SerializeField] private int _fuel;
+    public int fuel;
+    public int maxFuel;
 
     private bool _consumingFuel;
     private float _timer;
@@ -34,10 +36,10 @@ public class SpaceshipMovement : MonoBehaviour
     private void FixedUpdate()
     {
         _timer += Time.fixedDeltaTime;
-        if (_consumingFuel && _timer >= 1f && _fuel > 0)
+        if (_consumingFuel && _timer >= 1f && fuel > 0)
         {
-            _fuel = (int)Mathf.Clamp(_fuel - 1, 0, Mathf.Infinity);
-            if (_fuel == 0)
+            fuel = (int)Mathf.Clamp(fuel - 1, 0, Mathf.Infinity);
+            if (fuel == 0)
             {
                 GameManager.Instance.GameOver();
             }
@@ -48,7 +50,7 @@ public class SpaceshipMovement : MonoBehaviour
 
     private void ProcessMovement(Vector2 movementInput)
     {
-        if (_fuel > 0)
+        if (fuel > 0)
         {
             _rb.AddForce(transform.forward * movementInput.y * _speed, ForceMode.Acceleration);
         }
@@ -71,5 +73,5 @@ public class SpaceshipMovement : MonoBehaviour
         }
     }
 
-    public void AddFuel(int amount) => _fuel += amount;
+    public void AddFuel(int amount) => fuel += amount;
 }

@@ -23,7 +23,7 @@ public class GasRefillController : MonoBehaviour
 
     IEnumerator FuelRoutine(SpaceshipMovement movement)
     {
-        while (_filling)
+        while (_filling && movement.maxFuel >= movement.fuel)
         {
             movement.AddFuel(_amountPerSecond);
             yield return new WaitForSeconds(1);
